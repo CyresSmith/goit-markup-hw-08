@@ -1,0 +1,24 @@
+.hero__button {
+    @extend %button;
+    display: block;
+    min-width: 200px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px;    
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    background-color: $accent-color;
+    color: $white;    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);    
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
+}

@@ -1,0 +1,79 @@
+.call-back-form {
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: $second-text-color;
+    }
+
+    &__label {
+        display: block;
+        margin-bottom: 4px;
+        text-align: left;
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: $timing-function;
+    }
+
+    &__field {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        display: block;
+        padding: 0 0 0 42px;
+        height: 40px;
+        width: 100%;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        transition-property: border-color;
+        transition-duration: 250ms;
+        transition-timing-function: $timing-function;
+    }
+
+    &__input:hover,
+    &__input:focus {
+        border-color: $accent-color;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        transition-property: fill, transform;
+        transition-duration: 250ms;
+        transition-timing-function: $timing-function;
+    }
+
+    &__input:hover+&__icon,
+    &__input:focus+&__icon,
+    &__input:not(:placeholder-shown)+&__icon {
+        fill: $accent-color;
+        transform: scale(1.2) translateY(-40%);
+    }
+
+    &__input--comment {
+        resize: none;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 12px 16px;
+    }
+
+    &-input--comment::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}

@@ -1,0 +1,31 @@
+.checkbox {
+    @include centered-flex();
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    &__input {
+        @include centered-flex();
+        width: 16px;
+        height: 15px;
+        margin-right: 7px;
+        border-radius: 2px;
+        border: 2px solid #212121;
+        fill: none;
+    }
+
+    &__input--hidden:focus+&__input {
+        box-shadow: 0px 0px 0px 2px $accent-color;
+    }
+    &__input--hidden:checked+&__input {
+        background-color: $accent-color;
+        fill: $white;
+        border: none;
+    }
+    &__link {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: $accent-color;
+    }
+}

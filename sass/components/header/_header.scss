@@ -1,0 +1,11 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+@import './site-nav';
+@import './contact-nav';

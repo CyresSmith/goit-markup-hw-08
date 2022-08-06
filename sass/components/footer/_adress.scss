@@ -1,26 +1,32 @@
 .adress {
     margin-top: 20px;
+    margin-bottom: 60px;
+}
 
-    &__item:not(:first-child) {
-        margin-top: 9px;
-        margin-bottom: 0px;
-    }
+.adress__list {
+    text-align: center;
+}
 
-    &__text {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        font-style: normal;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-        color: rgba(255, 255, 255, 0.6);
-        text-decoration: none;        
-        transition-property: color;
-        transition-duration: 250ms;
-        transition-timing-function: $timing-function;
-    }
+.adress__item:not(:first-child) {
+    margin-top: 9px;
+    margin-bottom: 0px;
+}
 
-    &__text:hover,
-    &__text:focus {
+.adress__text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
         color: #ffffff;
     }
 }
+

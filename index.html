@@ -2,7 +2,7 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="dedescription" content="Разработка сайтов любой сложности"/>
     <title> WebStudio </title>
@@ -19,47 +19,61 @@
 
     <header class="header">
         <div class="container container__header">
-            <nav>
-                <!--Лого-->
 
-                <a class="logo" href="index.html" lang="en"> <span class="logo__accent">Web</span>Studio</a>
+            <!--Лого-->
 
-                <!--Основная навигация-->
+            <a class="logo" href="index.html" lang="en"> <span class="logo__accent">Web</span>Studio</a>
 
-                <ul class="site-nav">
-                    <li class="site-nav__item">                        
-                        <a class="site-nav__link site-nav__link--current" href="index.html">Студія</a>                    
+            <button class="mobile-menu-open" type="button">
+                <svg class="mobile-" width="24" height="16">
+                <use href="./img/svg/icons.svg#menu_24px"></use>
+                </svg>
+            </button>
+
+            <div class="nav">
+                <nav>                
+                    
+                    <!--Основная навигация-->
+                    
+                    <ul class="site-nav">
+                        <li class="site-nav__item">                        
+                            <a class="site-nav__link site-nav__link--current" href="index.html">Студія</a>                    
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
+                        </li>
+                        <li class="site-nav__item">
+                            <a class="site-nav__link" href="#contacts">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--Блок контактов-->
+
+                <ul class="contact-nav">
+                    <li class="contact-nav__item">                    
+                        <a class="contact-nav__link" href="mailto:info@devstudio.com" lang="en">
+                            <svg class="contact-nav__icon" width="16" height="12">
+                                <use href="./img/svg/icons.svg#envelope"></use>
+                            </svg>
+                            <svg class="contact-nav__icon contact-nav__icon--hidden" width="16" height="12">
+                                <use href="./img/svg/icons.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
                     </li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="./portfolio.html">Портфоліо</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="#contacts">Контакти</a></li>
+                    <li class="contact-nav__item">                    
+                        <a class="contact-nav__link" href="tel:+380961111111">
+                            <svg class="contact-nav__icon" width="10" height="16">
+                                <use href="./img/svg/icons.svg#smartphone"></use>
+                            </svg>
+                            <svg class="contact-nav__icon contact-nav__icon--hidden" width="10" height="16">
+                                <use href="./img/svg/icons.svg#smartphone"></use>
+                            </svg>+38 096 111 11 11
+                        </a>
+                    </li>
                 </ul>
-            </nav>
-
-            <!--Блок контактов-->
-
-            <ul class="contact-nav">
-                <li class="contact-nav__item">                    
-                    <a class="contact-nav__link" href="mailto:info@devstudio.com" lang="en">
-                        <svg class="contact-nav__icon" width="16" height="12">
-                            <use href="./img/svg/icons.svg#envelope"></use>
-                        </svg>
-                        <svg class="contact-nav__icon contact-nav__icon--hidden" width="16" height="12">
-                            <use href="./img/svg/icons.svg#envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contact-nav__item">                    
-                    <a class="contact-nav__link" href="tel:+380961111111">
-                        <svg class="contact-nav__icon" width="10" height="16">
-                            <use href="./img/svg/icons.svg#smartphone"></use>
-                        </svg>
-                        <svg class="contact-nav__icon contact-nav__icon--hidden" width="10" height="16">
-                            <use href="./img/svg/icons.svg#smartphone"></use>
-                        </svg>+38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
+            </div>            
         </div>           
     </header>
 
@@ -69,14 +83,12 @@
 
         <!--Герой-->
 
-        <section class="section hero">
-            <div class="container">
-                <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-                <button class="button hero__button" type="button" data-modal-open>Замовити послугу</button>
-            </div>
+        <section class="section hero">            
+            <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+            <button class="hero__button" type="button" data-modal-open>Замовити послугу</button>
             <div class="backdrop backdrop--hidden" data-modal>
                 <div class="modal">
-                    <button class="button modal-close-button" type="button" width="11" height="11" data-modal-close>
+                    <button class="modal-close-button" type="button" width="11" height="11" data-modal-close>
                         <svg  height="11">
                             <use href="./img/svg/icons.svg#close"></use>
                         </svg>
@@ -121,7 +133,7 @@
                             </span>
                             <span>Погоджуюся з розсилкою та приймаю <a class="checkbox__link" href="">Умови договору</a> </span>
                         </label>
-                        <button class="button hero__button" type="submit">
+                        <button class="hero__button" type="submit">
                             Відправити
                         </button>
                     </form>                    
@@ -439,24 +451,27 @@
 
     <footer class="footer">
         <div class="container container__footer">
-            <div class="footer__contacts">
-                <!--Лого-->
+           
+            <!--Лого-->
     
-                <a class="logo logo--for-footer" href="index.html"><span class="logo__accent">Web</span>Studio</a>
+            <a class="logo logo--for-footer" href="index.html"><span class="logo__accent">Web</span>Studio</a>
     
-                <!--Контакты-->
-    
-                <address class="adress">
-                    <ul id="contacts" class="adress__list">
-                        <li class="adress__item"><a class="adress__text" href="https://goo.gl/maps/bL18XimWbJK8uWrq5"
-                                rel="noopener noreferrer nofollow" target="_blank">м. Київ, пр-т Лесі Українки, 26</a></li>
-                        <li class="adress__item"><a class="adress__text"
-                                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li class="adress__item"><a class="adress__text" href="tel:+380961111111">+38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
+            <!--Контакты-->
+
+            <address class="adress">
+                <ul id="contacts" class="adress__list">
+                    <li class="adress__item">
+                        <a class="adress__text" href="https://goo.gl/maps/bL18XimWbJK8uWrq5" rel="noopener noreferrer nofollow" target="_blank">м. Київ, пр-т Лесі Українки, 26</a>
+                    </li>
+                    <li class="adress__item">
+                        <a class="adress__text" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                    <li class="adress__item">
+                        <a class="adress__text" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                </ul>                    
+            </address>
+                
             <div class="join">
                 <h3 class="join__title">приєднуйтесь</h3>                
                 <ul class="social-links social-links--for-footer">
@@ -501,7 +516,7 @@
                     </label>
                     <input class="subscription__input" type="email" name="subscription-email" id="subscription-email"
                         placeholder="E-mail">
-                    <button class="button subscription__button" type="submit">                      
+                    <button class="subscription__button" type="submit">                      
                         Підписатися
                         <svg class="subscription__button__icon" width="24" height="24">
                             <use href="./img/svg/icons.svg#send"></use>

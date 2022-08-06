@@ -4,8 +4,9 @@
     overflow: hidden;
     width: 200px;
     height: 50px;
-    margin-left: 12px;
     padding: 10px 28px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: $accent-color;
     color: $white;
     text-align: left;
@@ -19,30 +20,44 @@
     transition-duration: 250ms;
     transition-timing-function: $timing-function;
 
-    &__icon {
-        position: absolute;
-        right: 28px;
-        fill: currentColor;
-        transition-property: transform;
-        transition-duration: 250ms;
-        transition-timing-function: $timing-function;
+    @media screen and (min-width:1200px) {
+        margin-left: 12px;
     }
-
-    &__icon--hidden {
-        transform: translateY(200%);
-    }
-
+    
     &:hover {
         background-color: #188ce8;
     }
+    
+    @media screen and (min-wisth:1200px) {
+        
+        &:hover .subscription__button__icon,
+        &:focus .subscription__button__icon {
+            transform: translateY(-200%);
+        }
 
-    &:hover &__icon,
-    &:focus &__icon {
-        transform: translateY(-200%);
+        &:hover .subscription__button__icon--hidden,
+        &:focus .subscription__button__icon--hidden {
+            transform: translateY(0);
+        }
+    }
+}
+
+.subscription__button__icon {
+    position: absolute;
+    right: 28px;
+    fill: currentColor;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: $timing-function;
+
+    &--hidden {
+        display: none;
     }
 
-    &:hover &__icon--hidden,
-    &:focus &__icon--hidden {
-        transform: translateY(0);
+    @media screen and (min-wisth:1200px) {
+
+        &--hidden {
+            transform: translateY(200%);
+        }
     }
 }

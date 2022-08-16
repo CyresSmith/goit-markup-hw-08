@@ -1,25 +1,29 @@
-.differences {
-    
+.differences {    
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    margin-top: calc(-1 * $card-set-gap);
+    margin-left: calc(-1 * $card-set-gap);
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width: 768px) {
         display: flex;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-        margin-top: calc(-1 * $card-set-gap);
-        margin-left: calc(-1 * $card-set-gap);
+    }
+
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+        flex-wrap: wrap;
     }
 }
 
 .differences__item {
+    flex-basis: 100%;
+    margin-left: $card-set-gap;
+    margin-top: $card-set-gap;
 
-    &:not(:last-child) {
-            margin-bottom: 30px;
+    @media screen and (min-width:768px) {
+        flex-basis: calc(100% / 2 - 30px);
     }
 
     @media screen and (min-width:1200px) {
         flex-basis: calc(100% / 4 - 30px);
-        margin-left: $card-set-gap;
-        margin-top: $card-set-gap;
     }
 }
 
@@ -38,14 +42,8 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
-
-    @media screen and (min-width:768px) {
-        text-align: left;        
-    }
 }
 
 .differences__text {
-    margin-top: 10px;    
-    line-height: 1.71;
+    margin-top: 10px;
 }

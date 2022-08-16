@@ -1,33 +1,13 @@
 .site-nav {
-    display: none;
+    display: flex;
+    list-style: none;
 
-    @media screen and (min-width: 768px) {
-        
+    &__item:not(:last-child) {
+        margin-right: 50px;
     }
-
-    @media screen and (min-width: 1600px) {
-        display: flex;
-        list-style: none;
-        padding: 0px;
-        margin-top: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 93px;
-        
-        &__item:not(:last-child) {
-            margin-right: 50px;
-        }
-        
-    }    
 }
 
 .site-nav__link {
-
-    @media screen and (min-width: 768px) {
-        
-    }
-
-    @media screen and (min-width:1600px) {
         display: block;
         position: relative;
         padding: 32px 0px;
@@ -39,7 +19,7 @@
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: $timing-function;
-        
+
         &::after {
             content: "";
             position: absolute;
@@ -54,8 +34,8 @@
             transition-property: transform;
             transition-duration: 250ms;
             transition-timing-function: $timing-function;
-            }
-        
+        }
+
         &:hover:after,
         &:focus:after {
             transform: scaleX(1);
@@ -74,7 +54,4 @@
         &--current::after {
             transform: scaleX(1);
         }
-        
     }
-        
-}

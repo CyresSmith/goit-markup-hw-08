@@ -1,9 +1,26 @@
-.footer {
+.footer {    
+    padding-top: 60px;
     padding-bottom: 60px;
     background-color: $second-bg-color;
+}
 
-    &__contacts {
-        flex-grow: 1;
+.footer__contacts {
+
+    @media screen and (max-width:1199px) {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+}
+
+.footer__contacts-nav {
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
     }
 }
 

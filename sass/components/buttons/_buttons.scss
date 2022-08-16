@@ -1,12 +1,11 @@
 %button {
     cursor: pointer;
     font-family: inherit;
-    padding: 0;
     border: 0px;
-    border-radius: 4px;
+    border-radius: 4px;    
 }
 
-@import './mobile-menu-open';
+@import './menu-toggle';
 @import './modal-close-button';
 @import './hero-button';
 @import './subscription-button';

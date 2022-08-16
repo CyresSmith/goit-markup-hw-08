@@ -1,11 +1,28 @@
+
+
 .filter {
+    margin-top: -15px;
+    margin-bottom: 40px;
 
-    &__list {
-        @include centered-flex();
-        margin-bottom: 50px;
+    @media screen and (min-width:768px) {
+        margin-bottom: 30px;
     }
+}
 
-    &__item:not(:last-child) {
+.filter__list {
+    @include centered-flex(flex-start);
+    flex-wrap: wrap;
+
+    @media screen and (min-width:768px) {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
+
+.filter__item {
+    margin-top: 15px;
+
+    &:not(:last-child) {
         margin-right: 8px;
     }
 }

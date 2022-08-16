@@ -1,10 +1,11 @@
 .adress {
     margin-top: 20px;
-    margin-bottom: 60px;
-}
-
-.adress__list {
     text-align: center;
+
+    @media screen and (min-width:1200px) {
+        text-align: left;
+        width: 231px;
+    }
 }
 
 .adress__item:not(:first-child) {
@@ -29,4 +30,3 @@
         color: #ffffff;
     }
 }
-

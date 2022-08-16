@@ -1,39 +1,55 @@
 .team {
+    margin-top: calc(-1 * $card-set-gap);
+    margin-left: calc(-1 * $card-set-gap);
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
     text-align: center;
 
-    @media screen and (min-width:1200px) {
-        display: flex;
-            margin-top: calc(-1 * $card-set-gap);
-            margin-left: calc(-1 * $card-set-gap);        
-    }
+    @media screen and (min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
 }
 
-.team__card {    
+.team__card {      
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
     background-color: $white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-                0px 1px 1px rgba(0, 0, 0, 0.14),
-                0px 2px 1px rgba(0, 0, 0, 0.2);
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
-    &:not(:last-child) {
-        margin-bottom: $card-set-gap;
+    & img {
+        min-height: auto;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    @media screen and (min-width:768px) {
+        flex-basis: calc(100% / 2 - $card-set-gap);
+
+        & img {
+            min-height: 374px;
+        }
     }
 
     @media screen and (min-width:1200px) {
         flex-basis: calc(100% / 4 - $card-set-gap);
-        margin-left: $card-set-gap;        
-    }    
+
+        & img {
+                min-height: 260px;
+            }
+    }
 }
 
 .team__content {
     padding-top: $card-set-gap;
     padding-bottom: 24px;
 
-    @media screen and (min-width:1200px) {
-        padding-bottom: $card-set-gap;        
+    @media screen and (min-width: 1200px) {
+        padding-bottom: $card-set-gap;
     }
 }
 
@@ -49,5 +65,3 @@
     margin-top: 10px;
     margin-bottom: 16px;
 }
-
-    

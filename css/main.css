@@ -431,6 +431,7 @@ nav {
   width: 100vw;
   height: 100vh;
   padding: 48px 40px;
+  z-index: 999;
   background-color: #FFFFFF;
   -webkit-transform: translateY(-100vh);
           transform: translateY(-100vh);

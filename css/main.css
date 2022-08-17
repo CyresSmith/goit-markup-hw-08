@@ -433,8 +433,8 @@ nav {
   padding: 48px 40px;
   z-index: 999;
   background-color: #FFFFFF;
-  -webkit-transform: translateY(-100vh);
-          transform: translateY(-100vh);
+  -webkit-transform: translateY(-200vh);
+          transform: translateY(-200vh);
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -1099,6 +1099,7 @@ nav {
   min-width: 450px;
   min-height: 581px;
   padding: 40px;
+  z-index: 888;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);

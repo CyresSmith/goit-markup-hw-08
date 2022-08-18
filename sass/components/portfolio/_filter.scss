@@ -1,21 +1,17 @@
-
-
-.filter {
+.filter__list {
+    @include centered-flex(flex-start);
+    flex-wrap: wrap;
     margin-top: -15px;
     margin-bottom: 40px;
 
     @media screen and (min-width:768px) {
-        margin-bottom: 30px;
-    }
-}
-
-.filter__list {
-    @include centered-flex(flex-start);
-    flex-wrap: wrap;
-
-    @media screen and (min-width:768px) {
         flex-wrap: nowrap;
         justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
     }
 }
 

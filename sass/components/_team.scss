@@ -1,20 +1,18 @@
-.team {
-    margin-top: calc(-1 * $card-set-gap);
-    margin-left: calc(-1 * $card-set-gap);
+.team {    
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
     text-align: center;
 
     @media screen and (min-width:768px) {
-            display: flex;
-            flex-wrap: wrap;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * $card-set-gap);
+        margin-left: calc(-1 * $card-set-gap);
+    }
 }
 
-.team__card {      
-    margin-top: $card-set-gap;
-    margin-left: $card-set-gap;
+.team__card {
     background-color: $white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -27,7 +25,15 @@
         object-position: center;
     }
 
+    @media screen and (max-width:767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
     @media screen and (min-width:768px) {
+        margin-top: $card-set-gap;
+        margin-left: $card-set-gap;
         flex-basis: calc(100% / 2 - $card-set-gap);
 
         & img {
